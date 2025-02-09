@@ -1,0 +1,824 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: #fff;
+    text-decoration: none;
+}
+
+body {
+    filter: invert(0);
+    background: #202020;
+}
+
+header {
+    position: absolute;
+    backdrop-filter: blur(50px);
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    z-index: 3;
+    background: transparent;
+    border-bottom: 1px solid #505050;
+    height: 100px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 24px;
+}
+
+.logo img {
+    width: 80px;
+}
+
+.logo a {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.btns {
+    display: flex;
+    gap: 16px;
+    font-size: 1.2rem;
+}
+
+.btns a {
+    padding: 16px;
+    font-weight: 400;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+.btns a:hover {
+    background-color: #141414;
+}
+
+section {
+    border-bottom: 1px solid #505050;
+    min-height: 100vh;
+    padding: 156px;
+    position: relative;
+}
+
+video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.1);
+    z-index: 0;
+}
+
+.home {
+    position: relative;
+    display: grid;
+    gap: 128px;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    background: #202020;
+}
+
+.home .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.home .right img {
+    width: 500px;
+    filter: drop-shadow(4px 50px 30px rgba(0, 0, 0, 0.5));
+}
+
+.right .line {
+    width: 500px;
+    height: 1px;
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+.home .right p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    z-index: 1;
+}
+
+.home .left {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    z-index: 1;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 32px;
+}
+
+.left p {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+@keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+  
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+  
+/* Opcional: Transición base para elementos en .right */
+.right img, .right p {
+    transition: 0.3s ease-in-out; 
+    opacity: 1;
+}
+
+.courses {
+    display: grid;
+    background: #141414;
+    align-items: center;
+    gap: 64px;
+    grid-template-columns: 0.75fr 1px 1fr; 
+}
+
+.courses .line {
+    width: 1px;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.courses h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.plans {
+    display: grid;
+    gap: 64px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background: #202020;
+    gap: 16px;
+    width: 100%;
+    height: 100%;
+    padding: 16px 32px;
+    cursor:default;
+    box-shadow: transparent;
+    border-radius: 10px;
+    transition: .2s ease-in-out;
+}
+
+.plan:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+}
+
+.courses .right {
+    height: 100%;
+    gap: 32px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2rem 1fr;
+}
+
+.planType{
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.planPrice {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.planText {
+    font-size: 1.2rem;
+}
+
+.planText li {
+    margin-left: 32px;
+}
+
+.planBtn {
+    font-size: 1.2rem;
+    border-radius: 10px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    background: #131313;
+    box-shadow: transparent;
+    transition: .2s ease-in-out;
+}
+
+.planBtn:hover {
+    background: #292929;  
+    border: 1px solid #fff;
+}
+
+.students {
+    display: grid;;
+    gap: 32px;
+    background: #0C0C0C;
+}
+
+.students .subtitle {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.studentsCont {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    align-items: center;
+}
+
+.student {
+    display: flex;
+    gap: 24px;
+    border: 1px solid transparent;
+    padding: 16px;
+    border-radius: 25px;
+    align-items: center;
+    background: #202020;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    transition: .2s ease-in-out;
+}
+
+.student:hover {
+    background: #292929;
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.05);
+}
+
+.studentInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+}
+
+.student h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.student p {
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.student img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+/*________________________________________________________*/
+
+.contact {
+  display: grid;
+   background-image: linear-gradient(#000 50%,  #202020);
+   min-height: 150vh;
+}
+
+.contact-top {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  /* --- Caja del formulario (izquierda) --- */
+  .contact-form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    background: #202020;
+    border-radius: 25px;
+    padding: 1.5rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  }
+  
+  /* Título del formulario */
+  .contact-form-box h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+
+  .contact-form-box input,
+  .contact-form-box textarea {
+    width: 100%;
+    background: #0C0C0C;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 0.8rem;
+    font-size: 0.95rem;
+    border: 1px solid transparent;
+    outline: none;
+    resize: none;
+    transition: 0.2s;
+  }
+  .contact-form-box input::placeholder,
+  .contact-form-box textarea::placeholder {
+    color: #aaa;
+    font-weight: 500;
+  }
+  .contact-form-box input:focus,
+  .contact-form-box textarea:focus {
+    border: 1px solid #505050;
+  }
+  
+  /* Botón de enviar */
+  .contact-form-box button {
+    display: block;
+    background: #2a2a2a;
+    border: none;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+  }
+  .contact-form-box button:hover {
+    background: #444;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .myinfo-item {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    transition: 0.2s;
+  }
+
+  .contact-info-box {
+    display: grid;
+    gap: 2rem;
+  }
+  
+  /* Bloques internos (location, social) */
+  .info-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #202020;
+    border-radius: 25px;
+    padding: 1rem;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  }
+  
+  /* Íconos principales */
+  .info-icon {
+    width: 40px;
+  }
+  
+  .container {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .snTxt {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  .info-item {
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #333;
+    border-radius: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+  }
+  .info-item-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .info-item p {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .info-item:hover {
+    background: #444;
+  }
+
+  .contact-bottom {
+    margin-top:200px;
+    display: grid;
+    grid-template-columns: 15fr .1fr 15fr .1fr 15fr;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  /* Cajas inferiores (FAQ, WebPages, Contacts) */
+  .bottom-box {
+    border-radius: 8px;
+    padding: 1rem;
+  }
+  
+  /* Títulos de las cajas inferiores */
+  .bottom-box h4 {
+    margin-bottom: 2rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+  }
+  
+  /* FAQ */
+  .faq-box p {
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  .faq-box strong {
+    display: inline-block;
+    margin-bottom: .2rem;
+  }
+  
+  /* WebPages */
+  .webpages-box ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  .webpages-box li {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+  }
+  
+  /* Contacts */
+  .contacts-box p {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+  
+.contact .line {
+  background: #fff;
+  height: 100%;
+  width: 1px;
+}
+
+.site-footer {
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.menu {
+  width: 0px;
+  height: 0px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  flex-direction: column;
+  pointer-events: none;
+}
+
+.menu line {
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  margin: 5px;
+  transform: translate(0) rotate(0);
+  transition: .3s;
+}
+
+menu {
+  transform: translateY(-110%);
+  position: absolute;
+  top: 100px;
+  right: 0;
+  background: #0C0C0C;
+  z-index: 2;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #505050;
+  transition: .3s ease-in-out;
+}
+
+menu p {
+  width: 100%;
+  text-align: center;
+  padding: 0 0 16px 0;
+  border-bottom: 1px solid #505050;
+}
+
+menu a {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+
+}
+
+@media (max-width: 1456px) {
+  .courses {
+    grid-template-columns: 1fr;
+  }
+  .contact-top {
+    grid-template-columns: 1fr;
+  }
+  .home {
+    padding-top: 156px;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .plans {
+    grid-template-columns: 1fr;
+  }
+  
+  .menu {
+    width: 50px;
+    height: 50px;
+    pointer-events: all;
+  }
+
+  menu {
+    display: flex;
+  }
+
+  .btns a {
+    display: none;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+  }
+  
+  .contact-bottom {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width: 800px) {
+  section {
+    padding: 64px;
+  }
+
+  .studentsCont {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+}
+  .student {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*=============================================
+=       ADAPTACIÓN PARA MÓVILES (max-width: 768px)
+=============================================*/
+@media (max-width: 768px) {
+  menu {
+    top: 70px;
+  }
+  /* Ajuste general del contenedor de la sección contact */
+  .contact {
+    /* Permite que la altura se ajuste al contenido en lugar de forzar 150vh */
+    min-height: auto;
+    padding: 50px 16px;
+    /* Si el gradiente resulta muy "alto", puedes ajustar el porcentaje en el background-image */
+    background-image: linear-gradient(#000 50%, #202020);
+  }
+  
+  /* Apila los elementos del .contact-top */
+  .contact-top {
+    grid-template-columns: 1fr;  /* Una sola columna */
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Los cuadros (formulario y info) se expanden al 100% */
+  .contact-form-box,
+  .contact-info-box {
+    width: 100%;
+  }
+  
+  /* Si la sección de información (myinfo-item) es muy amplia, reducimos padding y font-size */
+  .myinfo-item {
+    padding: 16px;
+    gap: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Ajuste en la disposición de la información de contacto interna */
+  .contact-info-box {
+    grid-template-rows: auto auto; /* Permite que cada bloque se acomode según su contenido */
+    gap: 1.5rem;
+  }
+  
+  /* Apilamos las cajas de la parte inferior (contact-bottom) verticalmente */
+  .contact-bottom {
+    margin-top: 50px;
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: 16px;
+  }
+  
+  /* Reducir márgenes y tamaños en los textos de las cajas inferiores */
+  .bottom-box h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .faq-box p,
+  .webpages-box li,
+  .contacts-box p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Si los separadores verticales (.line) resultan demasiado grandes o molestos en móviles, los ocultamos */
+  .contact .line {
+    display: none;
+  }
+  
+  /* Ajuste en los botones e inputs si es necesario */
+  .contact-form-box input,
+  .contact-form-box textarea {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+  
+  .contact-form-box button {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/*===========================================
+   AJUSTES RESPONSIVE PARA MÓVILES (max-width: 768px)
+===========================================*/
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    padding: 12px 16px;
+    height: 70px;
+  }
+  .logo img {
+    width: 60px;
+  }
+  .logo a {
+    font-size: 1.5rem;
+  }
+  .btns {
+    font-size: 1rem;
+    gap: 8px;
+  }
+  .btns a {
+    padding: 12px;
+  }
+  
+  /* Section general */
+  section {
+   
+    min-height: auto; /* Permite que la sección se ajuste al contenido */
+  }
+  
+  /* Video de fondo: asegúrate de que siga ocupando todo el contenedor */
+  video {
+    object-fit: cover;
+  }
+  
+  /* Home Section */
+  .home {
+    gap: 64px;
+    /* Si usas auto-fit con minmax, se adaptará bien en móviles */
+    grid-template-columns: 1fr;
+    padding: 80px 16px;
+  }
+  
+  /* Ajustes para la columna derecha en .home */
+  .home .right {
+    align-items: center;
+    padding: 16px;
+  }
+  .home .right img {
+    width: 100%;
+    max-width: 100%;
+  }
+  .right .line {
+    width: 100%;
+  }
+  
+  /* Reducción de tamaños de fuentes para títulos y párrafos */
+  h1 {
+    font-size: 1.8rem;
+    padding-bottom: 16px;
+  }
+  .home .right p,
+  .left p {
+    font-size: 1.2rem;
+  }
+  
+  /* Ajuste en la columna izquierda (en .home) si es necesario */
+  .home .left {
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .myinfo-item p {
+    font-size: 0.8rem;
+  }
+}
+
+/*===========================================
+=       ADAPTACIÓN PARA Z Flip (max-width: 425px)
+===========================================*/
+
+@media (max-width: 400px) {
+  .logo {
+    gap: 12px;
+  }
+  .logo a {
+   font-size: 1rem;
+  }
+  .logo img {
+    width: 45px;
+  }
+}
+
+@media (max-width: 320px) {
+  .logo img {
+    width: 0px;
+  }
+  .logo a {
+   font-size: 1rem;
+  }
+}
