@@ -1,7 +1,7 @@
   const images = [
-    { src: "_f16fcd7b-1b00-49e3-85e1-54dd055fb579.jfif", text: "Fantasía y Aventura" },
-    { src: "_69710de5-2477-48f7-883d-5f80c2f3db85.png", text: "Mundo Abierto Estilizado" },
-    { src: "_84553d43-3dd4-414e-adf3-2aafe07b08ae.jfif", text: "Juego de Disparos Realista" },
+    { src: "img4.jfif", text: "Fantasía y Aventura" },
+    { src: "img2.png", text: "Mundo Abierto Estilizado" },
+    { src: "img3.jfif", text: "Juego de Disparos Realista" },
     { src: "img1.jfif", text: "Exploración en Tercera Persona" }
     ];
 
